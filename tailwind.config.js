@@ -7,6 +7,7 @@ module.exports = {
     "./pikka_Ai_pages/**/*.html", 
     "./Video_template/**/*.html",  
     "./video_Generator/**/*.html",  
+    "./nsfw/**/*.html",  
     
   ],
   theme: {
