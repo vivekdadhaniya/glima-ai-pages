@@ -8,6 +8,7 @@ module.exports = {
     "./Video_template/**/*.html",  
     "./video_Generator/**/*.html",  
     "./nsfw/**/*.html",  
+    "./open-art/**/*.html",  
     
   ],
   theme: {
