@@ -56,6 +56,9 @@
     @apply text-white border-limegreen;
   }
 
+  .video-slider .slide {
+    margin: 0 10px;
+  }
 
   .nav-link {
     position: relative;
