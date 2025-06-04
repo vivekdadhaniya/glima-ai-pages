@@ -12,6 +12,7 @@ module.exports = {
     "./Image-models-template/**/*.html",
     "./Video-models-template/**/*.html",
     "./Imagine-art-image/**/*.html",
+    "./Imagine-Art-Video-template/**/*.html",
   ],
   theme: {
     extend: {
