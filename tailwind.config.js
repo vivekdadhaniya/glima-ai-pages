@@ -13,6 +13,7 @@ module.exports = {
     "./Video-models-template/**/*.html",
     "./Imagine-art-image/**/*.html",
     "./Imagine-Art-Video-template/**/*.html",
+    "./LLM-pages/**/*.html",
   ],
   theme: {
     extend: {
