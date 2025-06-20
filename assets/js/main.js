@@ -1,51 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("toggleButton");
-  const mobileMenu = document.getElementById("navbar-default");
-  const nav = document.getElementById("navbar");
-  const inner = document.getElementById("inner");
-  toggleButton.addEventListener("click", () => {
-      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-      toggleButton.setAttribute("aria-expanded", !isExpanded);
+    const toggleButton = document.getElementById("toggleButton");
+    const mobileMenu = document.getElementById("navbar-default");
+    const nav = document.getElementById("navbar");
+    const inner = document.getElementById("inner");
+    toggleButton.addEventListener("click", () => {
+        const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+        toggleButton.setAttribute("aria-expanded", !isExpanded);
 
-      // Toggle multiple classes
-      mobileMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("opacity-0");  // Example of another class to toggle
-      mobileMenu.classList.toggle("transition-all"); // Smooth transition
-      inner.classList.toggle("pb-[19px]");
-      nav.classList.toggle("h-auto");
-      nav.classList.toggle("bg-black/25");
-      nav.classList.toggle("bg-transparent");
-      nav.classList.toggle("backdrop-blur-lg"); // Example of adding/removing a background color
-  });
+        // Toggle multiple classes
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("opacity-0");  // Example of another class to toggle
+        mobileMenu.classList.toggle("transition-all"); // Smooth transition
+        inner.classList.toggle("pb-[19px]");
+        nav.classList.toggle("h-auto");
+        nav.classList.toggle("bg-black/25");
+        nav.classList.toggle("bg-transparent");
+        nav.classList.toggle("backdrop-blur-lg"); // Example of adding/removing a background color
+    });
 });
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.getElementById("navbar");
+    const navbar = document.getElementById("navbar");
 
-  if (!navbar) {
-      console.error("Navbar element not found! Make sure #navbar exists in the DOM.");
-      return;
-  }
+    if (!navbar) {
+        console.error("Navbar element not found! Make sure #navbar exists in the DOM.");
+        return;
+    }
 
-  function updateNavbar() {
-      console.log("Window Width:", window.innerWidth); // Debugging log
+    function updateNavbar() {
+        console.log("Window Width:", window.innerWidth); // Debugging log
 
-      if (window.innerWidth > 1024 ) {
-          if (window.scrollY > 100) {
-              navbar.classList.add("backdrop-blur-lg", "bg-black/25");
-          } else {
-              navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
-          }
-      } else {
-          navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
-      }
-  }
+        if (window.innerWidth > 1024) {
+            if (window.scrollY > 100) {
+                navbar.classList.add("backdrop-blur-lg", "bg-black/25");
+            } else {
+                navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+            }
+        } else {
+            navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+        }
+    }
 
-  window.addEventListener("scroll", updateNavbar);
-  window.addEventListener("resize", updateNavbar);
-  updateNavbar(); // Run once on page load
+    window.addEventListener("scroll", updateNavbar);
+    window.addEventListener("resize", updateNavbar);
+    updateNavbar(); // Run once on page load
 });
 
 
@@ -58,20 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const textarea = document.getElementById('user-input');
     const characterCountParagraph = document.getElementById('character-count-paragraph');
     const maxLength = 50; // Set the maximum character limit
-  
+
     // Event listener for when the user types in the textarea
     textarea.addEventListener('input', function () {
-      // If the current input exceeds the max length, truncate it
-      if (textarea.value.length > maxLength) {
-        textarea.value = textarea.value.substring(0, maxLength);
-      }
-  
-      // Update the paragraph with the current character count
-      const currentLength = textarea.value.length;
-      characterCountParagraph.textContent = `${currentLength} / ${maxLength}`;
+        // If the current input exceeds the max length, truncate it
+        if (textarea.value.length > maxLength) {
+            textarea.value = textarea.value.substring(0, maxLength);
+        }
+
+        // Update the paragraph with the current character count
+        const currentLength = textarea.value.length;
+        characterCountParagraph.textContent = `${currentLength} / ${maxLength}`;
     });
-  });
-  
+});
+
 
 //==================Modal=====================//
 const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
@@ -164,146 +164,146 @@ function closeAllModals() {
 }
 /*========dropdown=========*/
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-  const dropdownMenus = document.querySelectorAll(".dropdown-menu");
-  const submenuButtons = document.querySelectorAll(".submenu-btn");
-  const submenus = document.querySelectorAll(".submenu");
-  const closeDropdowns = document.querySelectorAll(".close-dropdown");
-  const closeSubmenus = document.querySelectorAll(".close-submenu");
-  const dropoverlay = document.getElementById("drop-overlay");
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+    const submenuButtons = document.querySelectorAll(".submenu-btn");
+    const submenus = document.querySelectorAll(".submenu");
+    const closeDropdowns = document.querySelectorAll(".close-dropdown");
+    const closeSubmenus = document.querySelectorAll(".close-submenu");
+    const dropoverlay = document.getElementById("drop-overlay");
 
-  // Function to show a menu
-  function showMenu(menu) {
-      setDropdownPosition(menu);
-      menu.classList.remove("opacity-0", "invisible", "translate-y-[-10px]");
-      menu.classList.add("opacity-100", "translate-y-0");
-  }
+    // Function to show a menu
+    function showMenu(menu) {
+        setDropdownPosition(menu);
+        menu.classList.remove("opacity-0", "invisible", "translate-y-[-10px]");
+        menu.classList.add("opacity-100", "translate-y-0");
+    }
 
-  // Function to hide a menu
-  function hideMenu(menu) {
-      menu.classList.remove("opacity-100", "translate-y-0");
-      menu.classList.add("opacity-0", "translate-y-[-10px]");
-      setTimeout(() => {
-          menu.classList.add("invisible");
-          
-      }, 300);
-  }
+    // Function to hide a menu
+    function hideMenu(menu) {
+        menu.classList.remove("opacity-100", "translate-y-0");
+        menu.classList.add("opacity-0", "translate-y-[-10px]");
+        setTimeout(() => {
+            menu.classList.add("invisible");
 
-  // Set position of dropdown
-  function setDropdownPosition(menu) {
-      const placement = menu.getAttribute("data-placement");
-      menu.style.left = "";
-      menu.style.right = "";
-      menu.style.top = "";
-      menu.style.bottom = "";
+        }, 300);
+    }
 
-      if (placement) {
-          if (placement.includes("right")) {
-              menu.style.left = "100%";
-          } else if (placement.includes("left")) {
-              menu.style.right = "100%";
-          } else if (placement.includes("top")) {
-              menu.style.bottom = "100%";
-          } else if (placement.includes("bottom")) {
-              menu.style.top = "100%";
-          }
-      }
-  }
+    // Set position of dropdown
+    function setDropdownPosition(menu) {
+        const placement = menu.getAttribute("data-placement");
+        menu.style.left = "";
+        menu.style.right = "";
+        menu.style.top = "";
+        menu.style.bottom = "";
 
-  // Show the overlay
-  function showOverlay() {
-      dropoverlay.classList.remove("hidden");
-  }
+        if (placement) {
+            if (placement.includes("right")) {
+                menu.style.left = "100%";
+            } else if (placement.includes("left")) {
+                menu.style.right = "100%";
+            } else if (placement.includes("top")) {
+                menu.style.bottom = "100%";
+            } else if (placement.includes("bottom")) {
+                menu.style.top = "100%";
+            }
+        }
+    }
 
-  // Hide the overlay if all dropdowns and submenus are invisible
-  function hideOverlay() {
-      const allMenusInvisible = Array.from(dropdownMenus).every(menu => menu.classList.contains("invisible"));
-      const allSubmenusInvisible = Array.from(submenus).every(submenu => submenu.classList.contains("invisible"));
+    // Show the overlay
+    function showOverlay() {
+        dropoverlay.classList.remove("hidden");
+    }
 
-      if (allMenusInvisible && allSubmenusInvisible) {
-          dropoverlay.classList.add("hidden");
-      }
-  }
+    // Hide the overlay if all dropdowns and submenus are invisible
+    function hideOverlay() {
+        const allMenusInvisible = Array.from(dropdownMenus).every(menu => menu.classList.contains("invisible"));
+        const allSubmenusInvisible = Array.from(submenus).every(submenu => submenu.classList.contains("invisible"));
 
-  // Toggle main dropdowns
-  dropdownBtns.forEach((btn, index) => {
-      const dropdownMenu = dropdownMenus[index];
+        if (allMenusInvisible && allSubmenusInvisible) {
+            dropoverlay.classList.add("hidden");
+        }
+    }
 
-      btn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          // Close other dropdowns
-          dropdownMenus.forEach(menu => {
-              if (menu !== dropdownMenu) hideMenu(menu);
-          });
+    // Toggle main dropdowns
+    dropdownBtns.forEach((btn, index) => {
+        const dropdownMenu = dropdownMenus[index];
 
-          // Toggle the clicked dropdown
-          if (dropdownMenu.classList.contains("invisible")) {
-              showMenu(dropdownMenu);
-              showOverlay();
-          } else {
-              hideMenu(dropdownMenu);
-          }
+        btn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            // Close other dropdowns
+            dropdownMenus.forEach(menu => {
+                if (menu !== dropdownMenu) hideMenu(menu);
+            });
 
-          // After toggling, check if overlay should be hidden
-          hideOverlay();
-      });
-  });
+            // Toggle the clicked dropdown
+            if (dropdownMenu.classList.contains("invisible")) {
+                showMenu(dropdownMenu);
+                showOverlay();
+            } else {
+                hideMenu(dropdownMenu);
+            }
 
-  // Toggle submenus
-  submenuButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const submenu = this.nextElementSibling;
-          const parentDropdown = this.closest(".dropdown-menu");
-          const siblingSubmenus = parentDropdown.querySelectorAll(".submenu");
+            // After toggling, check if overlay should be hidden
+            hideOverlay();
+        });
+    });
 
-          siblingSubmenus.forEach(sub => {
-              if (sub !== submenu) hideMenu(sub);
-          });
+    // Toggle submenus
+    submenuButtons.forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const submenu = this.nextElementSibling;
+            const parentDropdown = this.closest(".dropdown-menu");
+            const siblingSubmenus = parentDropdown.querySelectorAll(".submenu");
 
-          if (submenu.classList.contains("invisible")) {
-              showMenu(submenu);
-              showOverlay();
-          } else {
-              hideMenu(submenu);
-          }
+            siblingSubmenus.forEach(sub => {
+                if (sub !== submenu) hideMenu(sub);
+            });
 
-          // After toggling, check if overlay should be hidden
-          hideOverlay();
-      });
-  });
+            if (submenu.classList.contains("invisible")) {
+                showMenu(submenu);
+                showOverlay();
+            } else {
+                hideMenu(submenu);
+            }
 
-  // Close dropdown on close button click
-  closeDropdowns.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const dropdownMenu = this.closest(".dropdown-menu");
-          hideMenu(dropdownMenu);
-          hideOverlay();
-          dropoverlay.classList.add("hidden");
-          
-      });
-  });
+            // After toggling, check if overlay should be hidden
+            hideOverlay();
+        });
+    });
 
-  // Close submenu on close button click
-  closeSubmenus.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const submenu = this.closest(".submenu");
-          hideMenu(submenu);
-          hideOverlay();
-      });
-  });
+    // Close dropdown on close button click
+    closeDropdowns.forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const dropdownMenu = this.closest(".dropdown-menu");
+            hideMenu(dropdownMenu);
+            hideOverlay();
+            dropoverlay.classList.add("hidden");
 
-  // Close all dropdowns and submenus when clicking outside
-  document.addEventListener("click", function (e) {
-      dropdownMenus.forEach(menu => {
-          if (!menu.contains(e.target)) hideMenu(menu);
-      });
-      submenus.forEach(submenu => hideMenu(submenu));
-      hideOverlay();  // Check if overlay should be hidden
-      dropoverlay.classList.add("hidden");
-  });
+        });
+    });
+
+    // Close submenu on close button click
+    closeSubmenus.forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const submenu = this.closest(".submenu");
+            hideMenu(submenu);
+            hideOverlay();
+        });
+    });
+
+    // Close all dropdowns and submenus when clicking outside
+    document.addEventListener("click", function (e) {
+        dropdownMenus.forEach(menu => {
+            if (!menu.contains(e.target)) hideMenu(menu);
+        });
+        submenus.forEach(submenu => hideMenu(submenu));
+        hideOverlay();  // Check if overlay should be hidden
+        dropoverlay.classList.add("hidden");
+    });
 });
 
 
@@ -324,223 +324,288 @@ document.addEventListener("DOMContentLoaded", function () {
 /*=====number of image increse decrese========*/
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".minus").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-          var input = this.parentElement.querySelector("input");
-          var count = parseInt(input.value) - 1;
-          input.value = count < 1 ? 1 : count;
-          input.dispatchEvent(new Event("change"));
-      });
-  });
+    document.querySelectorAll(".minus").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var input = this.parentElement.querySelector("input");
+            var count = parseInt(input.value) - 1;
+            input.value = count < 1 ? 1 : count;
+            input.dispatchEvent(new Event("change"));
+        });
+    });
 
-  document.querySelectorAll(".plus").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-          var input = this.parentElement.querySelector("input");
-          input.value = parseInt(input.value) + 1;
-          input.dispatchEvent(new Event("change"));
-      });
-  });
+    document.querySelectorAll(".plus").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var input = this.parentElement.querySelector("input");
+            input.value = parseInt(input.value) + 1;
+            input.dispatchEvent(new Event("change"));
+        });
+    });
 });
 /*=========accordion======*/
 document.addEventListener('DOMContentLoaded', () => {
-  const defaultAccordionGroups = document.querySelectorAll('.accordion-group[data-accordion="default-accordion"]');
-  const alwaysOpenAccordionGroup = document.querySelector('.accordion-group[data-accordion="always-open-accordion"]');
+    const defaultAccordionGroups = document.querySelectorAll('.accordion-group[data-accordion="default-accordion"]');
+    const alwaysOpenAccordionGroup = document.querySelector('.accordion-group[data-accordion="always-open-accordion"]');
 
-  if (defaultAccordionGroups) {
-      defaultAccordion(defaultAccordionGroups);
-  }
-  if (alwaysOpenAccordionGroup) {
-      alwaysOpenAccordion(alwaysOpenAccordionGroup);
-  }
+    if (defaultAccordionGroups) {
+        defaultAccordion(defaultAccordionGroups);
+    }
+    if (alwaysOpenAccordionGroup) {
+        alwaysOpenAccordion(alwaysOpenAccordionGroup);
+    }
 
 });
 
 
 function defaultAccordion(defaultAccordionGroups) {
-  defaultAccordionGroups.forEach(defaultAccordionGroup => {
-      const accordionButtons = defaultAccordionGroup.querySelectorAll('.accordion-toggle');
-      accordionButtons.forEach(button => {
-          button.addEventListener('click', () => {
-              const accordion = button.parentElement;
-              const content = button.nextElementSibling;
-              const isOpen = content.style.maxHeight !== '';
+    defaultAccordionGroups.forEach(defaultAccordionGroup => {
+        const accordionButtons = defaultAccordionGroup.querySelectorAll('.accordion-toggle');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const accordion = button.parentElement;
+                const content = button.nextElementSibling;
+                const isOpen = content.style.maxHeight !== '';
 
-              if (isOpen) {
-                  close(button);
-                  content.style.maxHeight = '';
-                  accordion.classList.remove('active');
-              } else {
-                  content.style.maxHeight = content.scrollHeight + 'px';
-                  accordion.classList.add('active');
-                  accordionButtons.forEach(otherButton => {
-                      if (otherButton !== button) {
-                          const otherAccordion = otherButton.parentElement;
-                          otherAccordion.classList.remove('active');
-                          close(otherButton);
-                      }
-                  });
-              }
-          });
-      });
-  });
+                if (isOpen) {
+                    close(button);
+                    content.style.maxHeight = '';
+                    accordion.classList.remove('active');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    accordion.classList.add('active');
+                    accordionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherAccordion = otherButton.parentElement;
+                            otherAccordion.classList.remove('active');
+                            close(otherButton);
+                        }
+                    });
+                }
+            });
+        });
+    });
 }
 
 function close(element, accordion) {
-  const content = element.nextElementSibling;
-  content.style.maxHeight = '';
+    const content = element.nextElementSibling;
+    content.style.maxHeight = '';
 }
 function alwaysOpenAccordion(alwaysOpenAccordionGroup) {
-  const accordionButtons = alwaysOpenAccordionGroup.querySelectorAll('.accordion-toggle');
-  console.log(accordionButtons.length);
-  // var acc = document.getElementsByClassName("acc");
-  var i;
+    const accordionButtons = alwaysOpenAccordionGroup.querySelectorAll('.accordion-toggle');
+    console.log(accordionButtons.length);
+    // var acc = document.getElementsByClassName("acc");
+    var i;
 
-  for (i = 0; i < accordionButtons.length; i++) {
-      accordionButtons[i].addEventListener("click", function () {
-          this.parentElement.classList.toggle("active");
-          var acc_panel = this.nextElementSibling;
+    for (i = 0; i < accordionButtons.length; i++) {
+        accordionButtons[i].addEventListener("click", function () {
+            this.parentElement.classList.toggle("active");
+            var acc_panel = this.nextElementSibling;
 
-          if (acc_panel.style.maxHeight) {
-              acc_panel.style.maxHeight = '';
-          } else {
-              acc_panel.style.maxHeight = acc_panel.scrollHeight + "px";
-          }
-      });
-  }
+            if (acc_panel.style.maxHeight) {
+                acc_panel.style.maxHeight = '';
+            } else {
+                acc_panel.style.maxHeight = acc_panel.scrollHeight + "px";
+            }
+        });
+    }
 }
 /*============images change on click==========*/
 
 document.addEventListener("DOMContentLoaded", function () {
-  const thumbnails = document.querySelectorAll(".thumbnail");
-  const mainImage = document.querySelector(".main-image");
-  const thumbnailsContainer = document.querySelector(".max-w-sm");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+    const mainImage = document.querySelector(".main-image");
+    const thumbnailsContainer = document.querySelector(".max-w-sm");
 
-  thumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener("click", function () {
-          // Change main image source
-          mainImage.src = this.querySelector("img").src;
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", function () {
+            // Change main image source
+            mainImage.src = this.querySelector("img").src;
 
-          // Remove active border from all thumbnails
-          thumbnails.forEach(thumb => thumb.classList.remove("border-blue-500"));
+            // Remove active border from all thumbnails
+            thumbnails.forEach(thumb => thumb.classList.remove("border-blue-500"));
 
-          // Add active border to clicked thumbnail
-          this.classList.add("border-blue-500");
+            // Add active border to clicked thumbnail
+            this.classList.add("border-blue-500");
 
-          // Scroll the active button to the center
-          this.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-      });
-  });
+            // Scroll the active button to the center
+            this.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+        });
+    });
 
-  // Set first thumbnail as active on load
-  if (thumbnails.length > 0) {
-      thumbnails[0].classList.add("border-blue-500");
-      mainImage.src = thumbnails[0].querySelector("img").src;
-  }
+    // Set first thumbnail as active on load
+    if (thumbnails.length > 0) {
+        thumbnails[0].classList.add("border-blue-500");
+        mainImage.src = thumbnails[0].querySelector("img").src;
+    }
 });
 
 // Select all the radio buttons in the group
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all the buttons with the aspect-square class (your radio buttons)
-  const radioButtons = document.querySelectorAll('.aspect-square');
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all the buttons with the aspect-square class (your radio buttons)
+    const radioButtons = document.querySelectorAll('.aspect-square');
 
-  // Iterate over each radio button and add event listeners
-  radioButtons.forEach(button => {
-      button.addEventListener('click', function() {
-          // If the clicked button is already checked, do nothing
-          if (button.getAttribute('aria-checked') === 'true') return;
+    // Iterate over each radio button and add event listeners
+    radioButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // If the clicked button is already checked, do nothing
+            if (button.getAttribute('aria-checked') === 'true') return;
 
-          // Uncheck all radio buttons and reset data-state & aria-checked
-          radioButtons.forEach(radio => {
-              radio.setAttribute('aria-checked', 'false');
-              radio.setAttribute('data-state', 'unchecked');
-          });
+            // Uncheck all radio buttons and reset data-state & aria-checked
+            radioButtons.forEach(radio => {
+                radio.setAttribute('aria-checked', 'false');
+                radio.setAttribute('data-state', 'unchecked');
+            });
 
-          // Check the clicked radio button
-          button.setAttribute('aria-checked', 'true');
-          button.setAttribute('data-state', 'checked');
-      });
-  });
+            // Check the clicked radio button
+            button.setAttribute('aria-checked', 'true');
+            button.setAttribute('data-state', 'checked');
+        });
+    });
 });
+
+// filter effect code 
+(function ($) {
+    function drags(dragElement, resizeElement, container) {
+        dragElement.on('mousedown.ba-events touchstart.ba-events', function (e) {
+            e.preventDefault();
+            // Add active class for styling (if needed)
+            dragElement.addClass('ba-draggable');
+            resizeElement.addClass('ba-resizable');
+            var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+            var dragWidth = dragElement.outerWidth(),
+                posX = dragElement.offset().left + dragWidth - startX,
+                containerOffset = container.offset().left,
+                containerWidth = container.outerWidth();
+            var minLeft = containerOffset;
+            var maxLeft = containerOffset + containerWidth - dragWidth;
+            // Mouse move
+            $(document).on('mousemove.ba-events touchmove.ba-events', function (e) {
+                var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+                var leftValue = moveX + posX - dragWidth;
+                // Keep handle within bounds
+                if (leftValue < minLeft) leftValue = minLeft;
+                if (leftValue > maxLeft) leftValue = maxLeft;
+                // Calculate percentage position
+                var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+                // :white_check_mark: Update only this instance
+                dragElement.css('left', widthValue);
+                resizeElement.css('width', widthValue);
+            });
+            // Mouse up
+            $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function () {
+                // Remove active classes
+                dragElement.removeClass('ba-draggable');
+                resizeElement.removeClass('ba-resizable');
+                // Unbind events
+                $(document).off('.ba-events');
+            });
+        });
+    }
+    // Plugin definition
+    $.fn.beforeAfter = function () {
+        return this.each(function () {
+            var cur = $(this);
+            var width = cur.width() + 'px';
+            cur.find('.resize img').css('width', width);
+            // Bind drag functionality
+            drags(cur.find('.handle'), cur.find('.resize'), cur);
+            // Handle resize
+            $(window).on('resize', function () {
+                var width = cur.width() + 'px';
+                cur.find('.resize img').css('width', width);
+            });
+        });
+    };
+})(jQuery);
+// :white_check_mark: Initialize all sliders
+$(function () {
+    $('.ba-slider').beforeAfter();
+    $('.ba-slider2').beforeAfter();
+    $('.ba-slider3').beforeAfter(); // add more as needed
+});
+
 /*=======range slider==========*/
-  // Initialize the range slider and update the display dynamically
-  $(document).ready(function() {
+// Initialize the range slider and update the display dynamically
+$(document).ready(function () {
     // Initialize the range slider
     $('#downPayment').rangeslider({
-      polyfill: false,
-      onSlide: function(position, value) {
-        // Update the display with the slider's value
-        $('#sliderValue').text(value.toLocaleString());
-      }
+        polyfill: false,
+        onSlide: function (position, value) {
+            // Update the display with the slider's value
+            $('#sliderValue').text(value.toLocaleString());
+        }
     });
-  });
+});
 
-  
+
 /* ============= Custom Select Picker=========*/
 $(document).ready(function () {
-	'use strict';
-	$("select").each(function () {
-		'use strict';
-		var $this = $(this),
-			numberOfOptions = $(this).children("option").length;
+    'use strict';
+    $("select").each(function () {
+        'use strict';
+        var $this = $(this),
+            numberOfOptions = $(this).children("option").length;
 
-		$this.addClass("select-hidden");
-		$this.wrap('<div class="select"></div>');
-		$this.after('<div class="select-styled"></div>');
+        $this.addClass("select-hidden");
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
 
-		var $styledSelect = $this.next("div.select-styled");
-		$styledSelect.text(
-			$this
-			.children("option")
-			.eq(0)
-			.text()
-		);
+        var $styledSelect = $this.next("div.select-styled");
+        $styledSelect.text(
+            $this
+                .children("option")
+                .eq(0)
+                .text()
+        );
 
-		var $list = $("<ul />", {
-			class: "select-options"
-		}).insertAfter($styledSelect);
+        var $list = $("<ul />", {
+            class: "select-options"
+        }).insertAfter($styledSelect);
 
-		for (var i = 0; i < numberOfOptions; i++) {
-			$("<li />", {
-				text: $this
-					.children("option")
-					.eq(i)
-					.text(),
-				rel: $this
-					.children("option")
-					.eq(i)
-					.val()
-			}).appendTo($list);
-		}
+        for (var i = 0; i < numberOfOptions; i++) {
+            $("<li />", {
+                text: $this
+                    .children("option")
+                    .eq(i)
+                    .text(),
+                rel: $this
+                    .children("option")
+                    .eq(i)
+                    .val()
+            }).appendTo($list);
+        }
 
-		var $listItems = $list.children("li");
+        var $listItems = $list.children("li");
 
-		$styledSelect.on('click' , function (e) {
-			e.stopPropagation();
-			$("div.select-styled.active")
-				.not(this)
-				.each(function () {
-					$(this)
-						.removeClass("active")
-						.next("ul.select-options")
-						.hide();
-				});
-			$(this)
-				.toggleClass("active")
-				.next("ul.select-options")
-				.toggle();
-		});
+        $styledSelect.on('click', function (e) {
+            e.stopPropagation();
+            $("div.select-styled.active")
+                .not(this)
+                .each(function () {
+                    $(this)
+                        .removeClass("active")
+                        .next("ul.select-options")
+                        .hide();
+                });
+            $(this)
+                .toggleClass("active")
+                .next("ul.select-options")
+                .toggle();
+        });
 
-		$listItems.on('click' , function (e) {
-			e.stopPropagation();
-			$styledSelect.text($(this).text()).removeClass("active");
-			$this.val($(this).attr("rel"));
-			$list.hide();
-			//console.log($this.val());
-		});
+        $listItems.on('click', function (e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass("active");
+            $this.val($(this).attr("rel"));
+            $list.hide();
+            //console.log($this.val());
+        });
 
-		$(document).on('click' , function () {
-			$styledSelect.removeClass("active");
-			$list.hide();
-		});
-	});
+        $(document).on('click', function () {
+            $styledSelect.removeClass("active");
+            $list.hide();
+        });
+    });
 });
+
+
+

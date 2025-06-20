@@ -520,11 +520,12 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    width: 100%; 
+    width: 100%;
     min-height: 130px;
     line-height: 19px;
     @apply placeholder:text-white/50
   }
+
   .text-input-prompt {
     border-radius: 8px;
     border: 0.8px solid rgba(255, 255, 255, 0.10);
@@ -535,8 +536,63 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    width: 100%; 
+    width: 100%;
     line-height: 19px;
     @apply placeholder:text-white
+  }
+
+  .ba-slider .resize, .ba-slider2 .resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    resize: none;
+  }
+
+  .ba-slider .handle,
+  .ba-slider2 .handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    margin-left: -2px;
+    background: #000;
+    cursor: ew-resize;
+  }
+
+  .ba-slider .handle:after,
+  .ba-slider2 .handle:after {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    /* content: '↔'; */
+    content: '';
+    background-image: url(https://glima.ai/storage/media/1749186970_kkdCphpDtkRON.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    margin: -13px 0px 0px -13px;
+    background-color: #000;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .resize img {
+    height: 100%;
+  }
+
+  .ba-slider img,
+  .ba-slider2 img {
+    width: 100%;
+    display: block;
+    max-width: none;
   }
 }

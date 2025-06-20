@@ -14,6 +14,7 @@ module.exports = {
     "./Imagine-art-image/**/*.html",
     "./Imagine-Art-Video-template/**/*.html",
     "./LLM-pages/**/*.html",
+    "./Ediotor-pages/**/*.html",
   ],
   theme: {
     extend: {
