@@ -587,6 +587,8 @@
 
   .resize img {
     height: 100%;
+    border-radius: 20px;
+     
   }
 
   .ba-slider img,
@@ -595,4 +597,13 @@
     display: block;
     max-width: none;
   }
+  .dahboard-slider .slick-list.draggable,
+  .dahboard-slider .slick-track {
+    overflow: visible !important;
+  }
+  .dahboard-slider .slide {
+    width: 740px;
+    height: auto;
+  }
+ 
 }
