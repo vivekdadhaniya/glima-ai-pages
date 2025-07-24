@@ -544,7 +544,7 @@
   .ba-slider .resize, .ba-slider2 .resize {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
     height: 100%;
     width: 50%;
     overflow: hidden;
@@ -588,7 +588,7 @@
   .resize img {
     height: 100%;
     border-radius: 20px;
-     
+
   }
 
   .ba-slider img,
@@ -597,13 +597,37 @@
     display: block;
     max-width: none;
   }
+
   .dahboard-slider .slick-list.draggable,
   .dahboard-slider .slick-track {
     overflow: visible !important;
   }
+
   .dahboard-slider .slide {
     width: 740px;
     height: auto;
   }
- 
+
+  /* tab css  */
+  .tab-buttons li {
+    padding: 8px 16px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+
+  .tab-buttons li.active {
+    background: #C6FF00;
+    color: #0A0A0A;
+  }
+
+  .tab-panel {
+    display: none;
+    padding-top: 15px;
+    
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
 }

@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glima AI</title>
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="../assets/css/styles-output.css">
+</head>
+
+<body class="md:overflow-hidden">
+    <div class="flex flex-col max-md:gap-8 md:flex-row bg-black-0a0a0a">
+        <!--Header--->
+        <header class="py-4 px-3 border-b border-white/10 fixed top-0 z-[1000] w-full bg-black-0a0a0a">
+            <div class="flex justify-between items-center">
+                <a href="#" class=" 2xl:max-w-[230px] xl:max-w-[200px] lg:max-w-[180px]">
+                    <svg width="113" height="36" viewBox="0 0 113 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="35.7268" height="35.7268" rx="7.58393" fill="#C6FF00" />
+                        <path
+                            d="M110.103 14.0696H113.002V27.4879H110.103V25.5556C109.084 26.978 107.5 27.8367 105.407 27.8367C101.757 27.8367 98.7246 24.7505 98.7246 20.7787C98.7246 16.7801 101.757 13.7207 105.407 13.7207C107.5 13.7207 109.084 14.5795 110.103 15.975V14.0696ZM105.863 25.0726C108.278 25.0726 110.103 23.2745 110.103 20.7787C110.103 18.2829 108.278 16.4849 105.863 16.4849C103.448 16.4849 101.623 18.2829 101.623 20.7787C101.623 23.2745 103.448 25.0726 105.863 25.0726Z"
+                            fill="white" />
+                        <path
+                            d="M91.3012 13.7207C94.3337 13.7207 96.3733 15.814 96.3733 19.1685V27.4879H93.475V19.3564C93.475 17.4778 92.4552 16.4312 90.8718 16.4312C89.1543 16.4312 87.9466 17.5315 87.9466 19.9736V27.4879H85.0483V19.3564C85.0483 17.4778 84.109 16.4312 82.5256 16.4312C80.8886 16.4312 79.5468 17.5315 79.5468 19.9736V27.4879H76.6484V14.0696H79.5468V15.6798C80.4056 14.3648 81.7205 13.7207 83.3844 13.7207C85.1288 13.7207 86.4169 14.499 87.1952 15.8408C88.0808 14.4453 89.5031 13.7207 91.3012 13.7207Z"
+                            fill="white" />
+                        <path
+                            d="M71.8341 12.057C70.8144 12.057 69.9824 11.1982 69.9824 10.2052C69.9824 9.18545 70.8144 8.35352 71.8341 8.35352C72.8539 8.35352 73.6859 9.18545 73.6859 10.2052C73.6859 11.1982 72.8539 12.057 71.8341 12.057ZM70.385 27.488V14.0697H73.2833V27.488H70.385Z"
+                            fill="white" />
+                        <path d="M64.1211 27.4881V7.89746H67.0194V27.4881H64.1211Z" fill="white" />
+                        <path
+                            d="M61.4884 17.7731V19.0613C61.4884 24.1871 57.785 27.8369 52.2835 27.8369C46.4331 27.8369 42.2734 23.4893 42.2734 18.0952C42.2734 12.701 46.4868 8.35352 52.1225 8.35352C55.6917 8.35352 58.7242 10.1516 60.3076 12.8084L57.6508 14.3381C56.6847 12.5937 54.5914 11.3592 52.1225 11.3592C48.1506 11.3592 45.3596 14.2844 45.3596 18.122C45.3596 21.906 48.097 24.8312 52.3103 24.8312C55.7186 24.8312 57.8118 23.0599 58.3754 20.5373H52.0956V17.7731H61.4884Z"
+                            fill="white" />
+                        <path
+                            d="M12.9968 15.7929L7.69141 15.7897L7.69338 19.8093L12.8168 19.8123C13.3727 19.8121 13.8857 19.5159 14.1619 19.0357L17.0516 14.0292C17.3297 13.5479 17.3286 12.9558 17.0497 12.4728L14.4843 8.02932L11.0062 10.0374L13.6627 14.6386C13.9613 15.1513 13.5904 15.7914 12.9968 15.7929Z"
+                            fill="black" />
+                        <path
+                            d="M22.0295 14.6304L24.6849 10.0374L21.2029 8.0293L18.6386 12.4648C18.3608 12.9463 18.3608 13.5387 18.6386 14.018L21.5295 19.0238C21.8073 19.5053 22.3206 19.8004 22.8784 19.8004H28.0092V15.7842H22.6961C22.1028 15.7865 21.734 15.1452 22.0295 14.6304Z"
+                            fill="black" />
+                        <path
+                            d="M18.4029 23.0992L21.0529 27.6954L24.533 25.6839L21.9739 21.2454C21.6958 20.7641 21.1827 20.4679 20.6288 20.4688L14.8482 20.4695C14.2923 20.4693 13.7801 20.7663 13.5012 21.2493L10.9358 25.6928L14.4139 27.7009L17.0704 23.0996C17.3651 22.5847 18.1049 22.5859 18.4029 23.0992Z"
+                            fill="black" />
+                    </svg>
+                </a>
+                <ul class="lg:flex hidden items-center gap-9">
+                    <li><a href="#" class="header-links active">Apps</a></li>
+                    <li><a href="#" class="header-links">Models</a></li>
+                    <li><a href="#" class="header-links">Threads</a></li>
+                    <li><a href="#" class="header-links">Articles</a></li>
+                    <li class="flex items-center gap-2"><a href="#" class="header-links  gap-1.5">Trainings</a><span
+                            class="bg-limegreen rounded-full px-1.5 py-0.5 text-xs text-black-0a0a0a leading-5 font-medium">New</span>
+                    </li>
+                </ul>
+                <div class="flex items-center gap-2">
+                    <div class="wrapper-dropdown w-full relative" id="dropdown">
+                        <button
+                            class="dropbtn w-full flex items-center justify-between   rounded-lg font-medium  text-base text-white transition-all duration-300  ">
+                            <div class="w-full bg-black rounded-[7px]">
+                                <div class="flex items-center justify-between rounded-lg  w-full ">
+                                    <img src="../assets/images/nav-user-avatar.png" alt="image">
+
+                                </div>
+                            </div>
+
+                        </button>
+
+                        <div
+                            class="dropdown absolute top-[57px] left-[-290px] w-[326px] z-20 invisible opacity-0  rounded-xl ">
+                            <div
+                                class="flex flex-col gap-1 rounded-lg p-3 bg-[#0C0C0C] w-full border border-[#99999933]">
+                                <div class="flex items-center justify-between pb-3">
+                                    <div class="block">
+                                        <h5 class="text-base font-semibold leading-5 text-white">Cameronwa</h5>
+                                        <span
+                                            class="text-xs font-normal leading-4 text-[#B1B1B1]">cameronwa@gmail.com</span>
+                                    </div>
+                                    <button
+                                        class="border border-[rgba(249,157,26,0.50)] bg-[rgba(249,157,26,0.10)] rounded-[34px] py-2 px-3 text-sm font-medium leading-5"><span
+                                            class="text-transparent bg-clip-text bg-[linear-gradient(263deg,#F99D1A_13.95%,#FFD79D_46.91%,#F99D1A_76.61%)]">Gold
+                                            Member</span></button>
+                                </div>
+                                <div class="border-t border-b border-[#161616] py-3">
+                                    <ul class="block">
+                                        <li><a href="#"
+                                                class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                                <svg class="text-white group-hover:text-[#F99D1A]" width="18"
+                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.75 15V14.25C3.75 11.3505 6.10051 9 9 9C11.8995 9 14.25 11.3505 14.25 14.25V15"
+                                                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M9 9C10.6568 9 12 7.65683 12 6C12 4.34314 10.6568 3 9 3C7.34314 3 6 4.34314 6 6C6 7.65683 7.34314 9 9 9Z"
+                                                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </svg>
+
+                                                My Profile
+                                            </a></li>
+                                        <li><a href="#"
+                                                class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                                <svg class="text-white group-hover:text-[#F99D1A]" width="18"
+                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.45027 2.69995C10.8229 2.69995 11.3094 3.43838 11.4461 4.20019C11.5232 4.62967 12.3288 5.11123 12.7439 4.9768C13.44 4.75139 14.2664 4.81332 14.9062 5.84995C15.5436 7.06251 14.9732 7.89404 14.3305 8.39692C14.0127 8.64567 14.0127 9.35423 14.3305 9.60298C14.9732 10.1059 15.5436 10.9374 14.9062 12.15C14.2664 13.1866 13.44 13.2485 12.7439 13.0231C12.3288 12.8887 11.5232 13.3702 11.4461 13.7997C11.3094 14.5615 10.8229 15.3 9.45027 15.3C8.07764 15.3 7.59113 14.5615 7.45445 13.7997C7.37739 13.3702 6.57173 12.8887 6.15661 13.0231C5.46051 13.2485 4.63413 13.1866 3.9943 12.15C3.43914 11.0938 3.80033 10.3267 4.3274 9.81406C4.63615 9.51378 4.58006 8.6147 4.24582 8.34307C3.66098 7.86778 3.27109 7.08635 3.9943 5.84995C4.60083 4.81304 5.34665 4.66962 5.99916 4.84226C6.43294 4.95703 7.38306 4.42388 7.50147 3.99108C7.68815 3.30876 8.20392 2.69995 9.45027 2.69995Z"
+                                                        stroke="currentColor" stroke-width="1.2"></path>
+                                                    <circle cx="9.4525" cy="8.99998" r="1.29" stroke="currentColor"
+                                                        stroke-width="1.2"></circle>
+                                                </svg>
+
+                                                Settings
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <button
+                                    class="mt-3 w-full bg-[#191919] rounded-lg py-2 px-3 flex justify-center gap-1.5 text-sm font-medium text-white transition-all duration-500 hover:bg-[#2d2d2d]">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 15H13.5" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M9 3V12M9 12L11.625 9.375M9 12L6.375 9.375" stroke="white"
+                                            stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+
+                                    Log Out
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-limegreen py-2 px-3 rounded-lg flex items-center transition-all duration-500 hover:bg-[#a8d609] text-sm font-medium leading-5 text-black">
+                        Generate
+                    </button>
+                    <button
+                        class="bg-transparent border border-white/20 py-2 px-3 rounded-lg flex items-center transition-all duration-500 hover:bg-white/10 text-sm font-medium leading-5 text-white whitespace-nowrap">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--SideBar-->
+        <div class="relative flex md:h-full gap-5 md:overflow-hidden p-3 md:p-5 pb-0 md:pr-0 pt-0">
+            <aside
+                class="md:fixed relative md:left-3 top-[85px] xl:w-[370px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide z-50 flex justify-between flex-col bg-black-1B1B1B nav-list rounded-xl p-3.5 border border-white/20">
+                <div class="flex flex-col pb-8">
+                    <div class="border-b border-white/10 mb-4 pb-3.5">
+                        <div class="flex items-center gap-3.5">
+                            <a href="#" class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M21 12H3M3 12L11.5 3.5M3 12L11.5 20.5" stroke="white" stroke-width="1.6"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="32" viewBox="0 0 2 32"
+                                fill="none">
+                                <path opacity="0.1" d="M1 1L0.999999 31" stroke="white" stroke-linecap="round" />
+                            </svg>
+                            <h4 class="text-xl font-semibold text-white leading-6">Image Generator</h4>
+                        </div>
+                    </div>
+                    <ul class="flex flex-col gap-3.5 ">
+                        <li class="">
+                            <div class="flex flex-col gap-3.5">
+
+                                <div class="flex items-center gap-2.5 relative">
+                                    <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+                                        width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="18.5" fill="white" stroke="#0A0A0A"
+                                            stroke-width="3" />
+                                        <path
+                                            d="M19.9998 14.167L19.9998 20.0003M19.9998 25.8337L19.9998 20.0003M25.8332 20.0003L19.9998 20.0003M14.1665 20.0003L19.9998 20.0003"
+                                            stroke="black" stroke-width="1.4" stroke-linecap="round" />
+                                    </svg>
+                                    <div
+                                        class="border border-white/10 hover:border-limegreen transition-all duration-500 outline-none bg-black-0a0a0a w-full h-36 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-xl relative z-[2] rounded-xl transition-all duration-500 cursor-pointer">
+                                        <label
+                                            class="flex flex-col items-center justify-center gap-4 h-full w-full cursor-pointer">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.5">
+                                                    <path
+                                                        d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M15.75 5H21.25" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M18.5 7.75V2.25" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M2.66992 18.9496L7.59992 15.6396C8.38992 15.1096 9.52992 15.1696 10.2399 15.7796L10.5699 16.0696C11.3499 16.7396 12.6099 16.7396 13.3899 16.0696L17.5499 12.4996C18.3299 11.8296 19.5899 11.8296 20.3699 12.4996L21.9999 13.8996"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                            </svg>
+
+                                            <span class="text-sm text-white/50">Garment Image</span>
+                                            <input type="file" class="hidden" />
+                                        </label>
+                                    </div>
+                                    <div
+                                        class="border border-white/10 hover:border-limegreen transition-all duration-500 outline-none bg-black-0a0a0a w-full h-36 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-xl relative z-[2] rounded-xl transition-all duration-500 cursor-pointer">
+                                        <label
+                                            class="flex flex-col items-center justify-center gap-4 h-full w-full cursor-pointer">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.5">
+                                                    <path
+                                                        d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M15.75 5H21.25" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M18.5 7.75V2.25" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path
+                                                        d="M2.66992 18.9496L7.59992 15.6396C8.38992 15.1096 9.52992 15.1696 10.2399 15.7796L10.5699 16.0696C11.3499 16.7396 12.6099 16.7396 13.3899 16.0696L17.5499 12.4996C18.3299 11.8296 19.5899 11.8296 20.3699 12.4996L21.9999 13.8996"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                            </svg>
+
+                                            <span class="text-sm text-white/50">Face Image
+                                                Only</span>
+                                            <input type="file" class="hidden" />
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="">
+                            <div class="flex flex-col gap-3.5">
+                                <div class="flex items-center justify-between relative">
+                                    <label for="user-input" class=" xl:text-sm text-xs text-white font-normal">Prompt
+                                    </label>
+                                </div>
+                                <div class=" relative z-[2] rounded-xl transition-all duration-500 ">
+                                    <textarea name="prompt" id="user-input"
+                                        class="border border-white/10 hover:border-limegreen transition-all duration-500 outline-none bg-black-0a0a0a w-full h-32 resize-none pt-3 px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-xl"
+                                        placeholder="Describe your image here..."></textarea>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="flex flex-col gap-3.5">
+                                <label class="xl:text-sm text-xs text-white font-normal">Model Gender</label>
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <!-- Radio Button for aspect ration -->
+                                    <label for="Male" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Male" name="Model-Gender" value="Male"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            Male
+                                        </span>
+                                    </label>
+                                    <label for="Female" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Female" name="Model-Gender" value="Female"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            Female
+                                        </span>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex flex-col gap-3.5">
+                                <label class="xl:text-sm text-xs text-white font-normal">Model Size</label>
+                                <div class="grid grid-cols-3 gap-2.5">
+                                    <!-- Radio Button for Mode -->
+                                    <label for="Default" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Default" name="Model-Size" value="Default"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            Default
+                                        </span>
+                                    </label>
+                                    <label for="XS" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="XS" name="Model-Size" value="XS"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            XS
+                                        </span>
+                                    </label>
+                                    <label for="S" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="S" name="Model-Size" value="S"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            S
+                                        </span>
+                                    </label>
+                                    <label for="M" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="M" name="Model-Size" value="M"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            M
+                                        </span>
+                                    </label>
+                                    <label for="L" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="L" name="Model-Size" value="L"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            L
+                                        </span>
+                                    </label>
+                                    <label for="XL" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="XL" name="Model-Size" value="XL"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            XL
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex flex-col gap-3.5">
+                                <label class="xl:text-sm text-xs text-white font-normal">Location</label>
+                                <div class="grid grid-cols-3 gap-2.5">
+                                    <!-- Radio Button for aspect ration -->
+                                    <label for="Location-Default" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Location-Default" name="Location" value="Default"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            Default
+                                        </span>
+                                    </label>
+                                    <label for="Park"
+                                        class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Park" name="Location"
+                                            value="Park" class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            Park
+                                        </span>
+                                    </label>
+                                    <label for="City" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="City" name="Location" value="City"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+
+                                            City
+                                        </span>
+                                    </label>
+                                   
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+
+                </div>
+                <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
+                <div
+                    class="bg-black-1B1B1B sticky bottom-0 w-full left-0 right-0 mx-auto z-50 border-t border-white/10 ">
+                    <button
+                        class="py-2.5 px-4 rounded-lg flex justify-center items-center gap-2 text-lg text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 w-full">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2315_3680)">
+                                <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2315_3680">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Generate
+                    </button>
+                </div>
+
+            </aside>
+        </div>
+        <div
+            class="xl:w-[calc(100%-380px)] lg:w-[calc(100%-290px)] md:w-[calc(100%-290px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[86px] px-4">
+            <!--Main Content Page-->
+            <div class="w-full h-full relative">
+
+            </div>
+        </div>
+
+    </div>
+    <!--model dropdown-->
+    <div
+        class="dropdown-menu  z-[100]   absolute left-[25px] sm:left-1/3  md:left-[305px] xl:left-[400px] top-[25%]   mt-2 w-[calc(100%-50px)] sm:w-[calc(100%-490px)] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+            <span class="text-sm font-medium text-white">Video Templates </span>
+            <button class="close-dropdown text-gray-500 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                    <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div
+            class="flex items-center justify-start flex-wrap gap-5 p-5 w-full h-full max-h-[500px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="bg-black-1B1B1B rounded-[10px] hover-play cursor-pointer relative">
+                <div class="rounded-[10px] w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973384_iuegphpGIxyF2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="absolute top-0 inset-0 bg-gradient-to-b from-black/0 to-black/50 z-0"></div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5 z-[1]">Crush It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038538_OJoephpQO2aQY.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Ta da it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038556_maQkphphHMzBA.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Tear it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974388_RkO8phpfQULK5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Squish It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973421_6LGMphp823OZl.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Decapitate</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038433_Kii5phpXbgs5k.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Eye pop</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038387_x2JZphp6mEj5x.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Dissolve</h6>
+            </div>
+            <!-- line2  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038410_kWdXphpBLXgJm.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Explode it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974148_SRfcphpkgyQx2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Levitate it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974163_4CmHphpDBfeZu.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Melt it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974215_k5ZWphplb1ey6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Peel it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038475_aWOhphp27yuUN.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Poke it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973088_kZ7TphpK1lMF9.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">360 Degree Rotation</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973117_2nF1phpFUZaYo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Angry</h6>
+            </div>
+            <!-- line3  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973155_m7zzphp4Vbpop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">animeify</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973165_KI1ephpKirvte.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Assassin It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973177_DZnYphpnwQMyx.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Baby It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973194_mEz2phpW4omfd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Bride It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973208_4HoYphpwdQVqZ.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Cakeify Effect</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973344_6SFjphp7ZnPEJ.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Cartoon Jaw Drop</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973357_kym1phpyxRJlx.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Classy It</h6>
+            </div>
+            <!-- line 4  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973373_DDlfphpNvUcyw.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Crumble</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973407_wP57phpICMT7q.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Crying</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973436_LODOphphEjOBR.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Deflate it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744973449_XIXephpNJfxDc.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Disney Princess It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038456_EnIlphpP305HC.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Hug Jesus</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974031_ZrmIphpIVvyz8.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Hulk Transformation</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974200_mCSHphpApmL1w.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Muscle show off</h6>
+            </div>
+            <!-- line 5  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974045_ewVVphpylzsms.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Inflate it Effect</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974061_l0APphpKn5N3k.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Jumpscare</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974090_nxVAphps0mpBS.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Kissing</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974111_rPJfphpY3GgSm.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Laughing</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974182_gilyphpA9xiis.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Mona Lisa It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974230_FT8rphpEXxrIL.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Pirate Captain</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038486_o9xwphpeL9DjD.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Princess It</h6>
+            </div>
+            <!-- line 6  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974018_vWqephpKc67KS.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Gun shooting</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038497_uZy8phpTulU0E.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Puppy it</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038515_vLLNphpnbd7VL.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Realistic Tsunamis</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974074_taSYphpwBKpjz.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Jungle It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974290_Z9AYphpNGj6Bs.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Robotic Face Reveal</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974329_votZphpBrBESw.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Samurai It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974345_krRxphp6vLkv6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Selfie younger self</h6>
+            </div>
+            <!-- line 7  -->
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974357_rtMnphpTGrwCo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Skyrim Fus-Ro-Dah</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974373_PmWJphp8AngnN.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Snow White It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038527_0A5gphpMqnsm1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Super Saiyan</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974549_jXsTphpB5YlO4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">VIP It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038569_Mvtwphp6A7ctE.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Warrior It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1745038582_9ANMphpjpfVXt.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Zen It</h6>
+            </div>
+            <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer relative">
+                <div class="rounded-t-xl w-[180px] relative aspect-[180/100] ">
+                    <video class="rounded-[10px] card-video no-controls h-full w-full object-cover" width="100%"
+                        height="100%" muted="" playsinline="">
+                        <source src="https://glima.ai/storage/media/1744974499_WNJKphpNIuzhb.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h6 class="text-sm leading-[17px] text-white absolute bottom-2.5 left-2.5">Zoom call </h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN JS-->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
+</html>
